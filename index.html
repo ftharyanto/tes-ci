@@ -7,16 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tes Python</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <form class="col s12">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn" id="parse_text" py-click="parse_text()">parse</a>
+                    <textarea id="source" class="materialize-textarea"></textarea>
+                    <label for="source">Source</label>
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <p id="tes"></p>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <h1>
-        <py-script>
-            print('hello world')
-        </py-script>
-    </h1>
+    <py-script src="script.py"></py-script>
+    <py-config>
+        packages = [
+        "pandas"
+        ]
+    </py-config>
 </body>
 
 </html>
